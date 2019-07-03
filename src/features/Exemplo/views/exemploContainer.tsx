@@ -38,13 +38,9 @@ const mapStateToProps = ({ exemplo }: AppState): ExemploReduxStateType | any => 
   };
 };
 
-const mapDispatchToProps = (dispatch: Dispatch<any>) =>
-  bindActionCreators(
-    {
-      estadoLoading: ExemploOperation.estadoLoading
-    },
-    dispatch
-  );
+const mapDispatchToProps = {
+  estadoLoading: ExemploOperation.estadoLoading
+};
 
 export default connect(
   mapStateToProps,
