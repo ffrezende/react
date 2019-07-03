@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Grid, Paper, Typography, withStyles } from '@material-ui/core';
 
 import styles from './styles/cardStyle';
+import history from '../../../shared/router/history';
 
 interface IOwnProps {
   classes: any;
@@ -55,6 +56,16 @@ class Exemplo extends Component<IProps, IState> {
               <Typography className={classes.textoPadrao}>Estado redux = {estadoRedux} </Typography>
             </Grid>
           </Paper>
+          <Grid item>
+            <Button
+              variant='contained'
+              color='primary'
+              className={classes.degredeButton}
+              onClick={() => history.push('/')}
+            >
+              Voltar
+            </Button>
+          </Grid>
         </Grid>
       </div>
     );
