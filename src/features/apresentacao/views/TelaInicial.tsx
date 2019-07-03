@@ -24,16 +24,22 @@ class TelaInicial extends Component<Props, State> {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Paper className={classes.paper}>
-          <Grid container>
-            <Grid item>
-              <Typography className={classes.textoPadrao}>Developer by: FFRezende </Typography>
+        <Grid
+          container
+          alignContent='center'
+          alignItems='center'
+          justify='center'
+          className={classes.gridCenter}
+        >
+          <Paper className={classes.paper}>
+            <Grid item className={classes.margin}>
               <Button className={classes.degredeButton} onClick={() => history.push('/loading')}>
                 Exemplo redux
               </Button>
+              <Typography className={classes.textoPadrao}>Developer by: FFRezende </Typography>
             </Grid>
-          </Grid>
-        </Paper>
+          </Paper>
+        </Grid>
       </div>
     );
   }

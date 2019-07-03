@@ -23,6 +23,12 @@ const styles = (theme: Object) => ({
   paper: {
     margin: 'auto',
     maxWidth: 500
+  },
+  gridCenter: {
+    height: '100vh'
+  },
+  margin: {
+    margin: '30px 20px 20px 20px'
   }
 });
 

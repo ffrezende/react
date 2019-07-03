@@ -27,10 +27,15 @@ class Exemplo extends Component<IProps, IState> {
     let estadoRedux = loading ? 'true' : 'false';
     return (
       <div className={classes.root}>
-        <Paper className={classes.paper}>
-          <Grid container>
-            <Grid item>
-              <Typography>Bem vindo exemploRedux FFRezende </Typography>
+        <Grid
+          container
+          alignContent='center'
+          alignItems='center'
+          justify='center'
+          className={classes.gridCenter}
+        >
+          <Paper className={classes.paper}>
+            <Grid item className={classes.margin}>
               <Button
                 variant='contained'
                 color='primary'
@@ -47,10 +52,10 @@ class Exemplo extends Component<IProps, IState> {
               >
                 Exemplo redux - false
               </Button>
-              <Typography>Estado redux = {estadoRedux} </Typography>
+              <Typography className={classes.textoPadrao}>Estado redux = {estadoRedux} </Typography>
             </Grid>
-          </Grid>
-        </Paper>
+          </Paper>
+        </Grid>
       </div>
     );
   }

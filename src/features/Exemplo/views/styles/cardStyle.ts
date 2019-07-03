@@ -7,8 +7,7 @@ const styles = (theme: Object) => ({
     flexGrow: 1
   },
   paper: {
-    margin: 'auto',
-    maxWidth: 500
+    margin: 'auto'
   },
   image: {
     width: 128,
@@ -19,6 +18,17 @@ const styles = (theme: Object) => ({
     display: 'block',
     maxWidth: '100%',
     maxHeight: '100%'
+  },
+  textoPadrao: {
+    fontFamily: 'Lato',
+    color: '#B8B8B8',
+    fontSize: 13
+  },
+  gridCenter: {
+    height: '100vh'
+  },
+  margin: {
+    margin: '30px 20px 20px 20px'
   }
 });
 
