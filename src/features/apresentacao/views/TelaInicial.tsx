@@ -24,7 +24,7 @@ class TelaInicial extends Component<Props, State> {
     return (
       <div>
         <Typography>Bem vindo ao boiler FFRezende </Typography>
-        <Button onClick={() => history.push('/loading')}> </Button>
+        <Button onClick={() => history.push('/loading')}>Exemplo redux </Button>
       </div>
     );
   }
