@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { withStyles, Typography } from '@material-ui/core';
-
+import { Button, withStyles, Typography } from '@material-ui/core';
+import history from '../../../shared/router/history';
 type Props = {
   classes: any;
 };
@@ -21,7 +21,12 @@ class TelaInicial extends Component<Props, State> {
   render() {
     const { classes } = this.props;
     const { modalAberto } = this.state;
-    return <Typography>Bem vindo ao boiler FFRezende</Typography>;
+    return (
+      <div>
+        <Typography>Bem vindo ao boiler FFRezende</Typography>;
+        <Button onClick={() => history.push('/loading')}> </Button>
+      </div>
+    );
   }
 }
 

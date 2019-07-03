@@ -8,5 +8,5 @@ const enhancedMiddewares: StoreEnhancer = applyMiddleware(thunk);
 const initialState = {};
 const store: Store = createStore(rootReducer, initialState, enhancedMiddewares);
 
-export default store;
 export type AppState = ReturnType<typeof rootReducer>;
+export default store;
