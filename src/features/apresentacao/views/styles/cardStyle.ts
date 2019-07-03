@@ -3,6 +3,11 @@ const textoPadrao = {
 };
 
 const styles = (theme: Object) => ({
+  textoPadrao: {
+    fontFamily: 'Lato',
+    color: '#B8B8B8',
+    fontSize: 13
+  },
   degredeButton: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     border: 0,

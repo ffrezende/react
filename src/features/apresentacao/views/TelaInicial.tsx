@@ -25,9 +25,9 @@ class TelaInicial extends Component<Props, State> {
     return (
       <div className={classes.root}>
         <Paper className={classes.paper}>
-          <Grid container spacing={8}>
+          <Grid container>
             <Grid item>
-              <Typography>Bem vindo ao exemplo redux by FFRezende </Typography>
+              <Typography className={classes.textoPadrao}>Developer by: FFRezende </Typography>
               <Button className={classes.degredeButton} onClick={() => history.push('/loading')}>
                 Exemplo redux
               </Button>
