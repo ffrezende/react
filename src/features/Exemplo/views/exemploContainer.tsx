@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import { AppState } from '../../../store';
 
 import * as ExemploOperation from '../redux/exemploOperations';
+import { ExemploReduxStateType } from '../redux/exemploTypes';
 
 interface IOwnProps {
   classes: any;
@@ -31,20 +32,19 @@ class ExemploContainer extends Component<IProps, IState> {
   }
 }
 
-const mapStateToProps = ({ exemplo }: AppState): any => {
+const mapStateToProps = ({ exemplo }: AppState): ExemploReduxStateType | any => {
   return {
     loading: exemplo.loading
   };
 };
 
-const mapDispatchToProps = (dispatch: Dispatch<any>) => {
-  return bindActionCreators(
+const mapDispatchToProps = (dispatch: Dispatch<any>) =>
+  bindActionCreators(
     {
       estadoLoading: ExemploOperation.estadoLoading
     },
     dispatch
   );
-};
 
 export default connect(
   mapStateToProps,
