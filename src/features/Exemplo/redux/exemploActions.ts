@@ -1,4 +1,4 @@
-import { action, createAction } from 'typesafe-actions';
+import { createAction } from 'typesafe-actions';
 
 export const SET_LOADING = 'loading/SET_LOADING';
 

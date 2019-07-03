@@ -22,7 +22,7 @@ export class BackdropLoading extends Component<Props, {}> {
         }
       >
         <Grid item>
-          <img src='/imagens/loading.gif' />
+          <img src='/imagens/loading.gif' alt='loading' />
         </Grid>
       </Grid>
     );

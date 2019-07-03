@@ -19,12 +19,11 @@ class TelaInicial extends Component<Props, State> {
   }
 
   render() {
-    const { classes } = this.props;
-    const { modalAberto } = this.state;
+    // const { classes } = this.props;
     return (
       <div>
         <Typography>Bem vindo ao boiler FFRezende </Typography>
-        <Button onClick={() => history.push('/loading')}>Exemplo redux </Button>
+        <Button onClick={() => history.push('/loading')}>Exemplo redux</Button>
       </div>
     );
   }
