@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Button, withStyles, Typography } from '@material-ui/core';
+import { Button, Paper, Grid, withStyles, Typography } from '@material-ui/core';
 import history from '../../../shared/router/history';
+
+import styles from './styles/cardStyle';
 type Props = {
   classes: any;
 };
@@ -19,16 +21,22 @@ class TelaInicial extends Component<Props, State> {
   }
 
   render() {
-    // const { classes } = this.props;
+    const { classes } = this.props;
     return (
-      <div>
-        <Typography>Bem vindo ao boiler FFRezende </Typography>
-        <Button onClick={() => history.push('/loading')}>Exemplo redux</Button>
+      <div className={classes.root}>
+        <Paper className={classes.paper}>
+          <Grid container spacing={8}>
+            <Grid item>
+              <Typography>Bem vindo ao exemplo redux by FFRezende </Typography>
+              <Button className={classes.degredeButton} onClick={() => history.push('/loading')}>
+                Exemplo redux
+              </Button>
+            </Grid>
+          </Grid>
+        </Paper>
       </div>
     );
   }
 }
-
-const styles = {};
 
 export default withStyles(styles)(TelaInicial);

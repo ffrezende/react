@@ -37,7 +37,12 @@ class Exemplo extends Component<IProps, IState> {
           >
             Exemplo redux - true
           </Button>
-          <Button variant='contained' color='secondary' onClick={() => estadoLoading(false)}>
+          <Button
+            variant='contained'
+            color='secondary'
+            className={classes.button}
+            onClick={() => estadoLoading(false)}
+          >
             Exemplo redux - false
           </Button>
           <Typography>Estado redux = {estadoRedux} </Typography>
