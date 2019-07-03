@@ -23,7 +23,7 @@ class TelaInicial extends Component<Props, State> {
     const { modalAberto } = this.state;
     return (
       <div>
-        <Typography>Bem vindo ao boiler FFRezende</Typography>;
+        <Typography>Bem vindo ao boiler FFRezende </Typography>
         <Button onClick={() => history.push('/loading')}> </Button>
       </div>
     );
