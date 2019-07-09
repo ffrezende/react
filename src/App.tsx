@@ -7,6 +7,7 @@ import history from './shared/router/history';
 import BackdropLoadingContainer from './features/loading/views/BackdropLoadingContainer';
 import TelaInicial from './features/apresentacao/views/TelaInicial';
 import ExemploContainer from './features/Exemplo/views/exemploContainer';
+import HooksContainer from './features/hooks/views/hooksContainer';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Switch>
           <Route exact path='/' component={TelaInicial} />
           <Route exact path='/loading' component={ExemploContainer} />
+          <Route exact path='/hooks' component={HooksContainer} />
           {/* <Route exact path='/callback' component={CallbackContainer} /> */}
         </Switch>
       </Router>
