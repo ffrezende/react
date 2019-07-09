@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Grid, Paper, Typography, withStyles } from '@material-ui/core';
+
 import styles from './style/cardStyle';
+import history from '../../../shared/router/history';
 
 interface IOwnProps {
   classes: any;
@@ -25,6 +27,27 @@ const Hooks: React.FC<IProps> = (props: IProps) => {
   return (
     <div>
       <Typography className={classes.textoPadrao}>{document.title}</Typography>
+      <Button
+        variant='contained'
+        color='secondary'
+        className={classes.button}
+        onClick={() => {
+          setCount(count + 1);
+          setDocument({ title: `You clicked ${count} times` });
+        }}
+      >
+        useState useEffects
+      </Button>
+      <Grid item>
+        <Button
+          variant='contained'
+          color='primary'
+          className={classes.degredeButton}
+          onClick={() => history.push('/')}
+        >
+          Voltar
+        </Button>
+      </Grid>
     </div>
   );
 };

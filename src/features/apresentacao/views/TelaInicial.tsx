@@ -34,7 +34,12 @@ class TelaInicial extends Component<Props, State> {
           <Paper className={classes.paper}>
             <Grid item className={classes.margin}>
               <Button className={classes.degredeButton} onClick={() => history.push('/loading')}>
-                Exemplo Transição Tela
+                Exemplo Redux
+              </Button>
+            </Grid>
+            <Grid item className={classes.margin}>
+              <Button className={classes.degredeButton} onClick={() => history.push('/hooks')}>
+                Exemplo Hooks
               </Button>
               <Typography className={classes.textoPadrao}>Developer by: FFRezende </Typography>
             </Grid>
