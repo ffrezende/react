@@ -1,3 +1,5 @@
+docker build --build-arg ENV_FILE_REACT=dev -t IMAGE:TAG .
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
