@@ -1,1 +1,1 @@
-##Demonstrativo de arquitetura redux -> Operation -> Manager -> Service 
+## Demonstrativo de arquitetura redux -> Operation -> Manager -> Service 
