@@ -42,15 +42,11 @@ class TelaInicial extends Component<Props, State> {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Grid
-          container
-          alignContent='center'
-          alignItems='center'
-          justify='center'
-          className={classes.gridCenter}
-        >
+        <Grid container alignContent='center' alignItems='center' justify='center' className={classes.gridCenter}>
           <Paper className={classes.paper}>
-            {this.renderList()}
+            {
+              this.renderList()
+            }
             <Typography className={classes.textoPadrao}>Developer by: FFRezende </Typography>
           </Paper>
         </Grid>

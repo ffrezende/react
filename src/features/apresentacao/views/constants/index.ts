@@ -1,11 +1,15 @@
 const listOfFunction = [
     {
-        text: 'Exemplo Redux',
+        text: 'Redux',
         urlPush: '/loading'
     },
     {
-        text: 'Exemplo Hooks',
+        text: 'Hooks',
         urlPush: '/hooks'
+    },
+    {
+        text: 'Material UI',
+        urlPush: '/material'
     }
 ];
 
