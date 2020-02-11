@@ -16,13 +16,13 @@ const Hooks: React.FC<IProps> = (props: IProps) => {
   const [document, setDocument] = useState({ title: '' });
 
   // Similar a componentDidMount e componentDidUpdate:
-  useEffect(() => {
-    setDocument({ title: `You clicked ${count} times` });
+  // useEffect(() => {
+  //   setDocument({ title: `You clicked ${count} times` });
 
-    return () => {
-      //Executa apos os dids
-    };
-  });
+  //   return () => {
+  //     //Executa apos os dids
+  //   };
+  // });
 
   return (
     <div>
