@@ -1,6 +1,15 @@
 
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
+.list {
+    width: 250;
+}
+
+.fullList {
+    width: 'auto';
+}
