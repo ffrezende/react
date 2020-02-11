@@ -1,6 +1,9 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { Button, Paper, Grid, withStyles, Typography } from '@material-ui/core';
 import history from '../../../shared/router/history';
+
+import listOfFunction from './constants/';
 
 import styles from './styles/cardStyle';
 type Props = {
@@ -20,6 +23,21 @@ class TelaInicial extends Component<Props, State> {
     };
   }
 
+  renderList() {
+    const { classes } = this.props;
+    return (
+      listOfFunction.map(element => {
+        return (
+          <Grid item className={classes.margin}>
+            <Button className={classes.degredeButton} onClick={() => history.push(element.urlPush)}>
+              {element.text}
+            </Button>
+          </Grid>
+        )
+      })
+    )
+  };
+
   render() {
     const { classes } = this.props;
     return (
@@ -32,17 +50,8 @@ class TelaInicial extends Component<Props, State> {
           className={classes.gridCenter}
         >
           <Paper className={classes.paper}>
-            <Grid item className={classes.margin}>
-              <Button className={classes.degredeButton} onClick={() => history.push('/loading')}>
-                Exemplo Redux
-              </Button>
-            </Grid>
-            <Grid item className={classes.margin}>
-              <Button className={classes.degredeButton} onClick={() => history.push('/hooks')}>
-                Exemplo Hooks
-              </Button>
-              <Typography className={classes.textoPadrao}>Developer by: FFRezende </Typography>
-            </Grid>
+            {this.renderList()}
+            <Typography className={classes.textoPadrao}>Developer by: FFRezende </Typography>
           </Paper>
         </Grid>
       </div>
