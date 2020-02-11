@@ -11,7 +11,7 @@ const enhancedMiddewares: StoreEnhancer = compose(
 //const enhancedMiddewares: StoreEnhancer = applyMiddleware(thunk);
 
 const initialState = {};
-const store: Store = createStore(rootReducer, initialState, enhancedMiddewares);
+const store: any = createStore(rootReducer, initialState, enhancedMiddewares);
 
 export type AppState = ReturnType<typeof rootReducer>;
 export default store;
