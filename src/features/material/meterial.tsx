@@ -32,7 +32,7 @@ export default function TemporaryDrawer() {
 
     return (
         <div className={`${styles['container']}`}>
-            <Button onClick={() => setOpenMenu(true)}>Open Menu</Button>
+            <Button className={styles['button']} onClick={() => setOpenMenu(true)}>Open Menu</Button>
             <Drawer open={openMenu} onClose={() => setOpenMenu(false)}>
                 {sideList()}
             </Drawer>
