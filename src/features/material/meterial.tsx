@@ -1,41 +1,55 @@
 import React, { useState } from 'react';
-import { Drawer, Button, List, Divider, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { Drawer, AppBar, Toolbar, List, Divider, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import { Menu, Mail } from '@material-ui/icons';
 
 import styles from './styles/index.module.css';
-
 export default function TemporaryDrawer() {
     const [openMenu, setOpenMenu] = useState(false);
 
+    const handleClick = (index: any) => {
+        switch (index) {
+            case 0:
+                alert('clicked Inbox');
+                break;
+            case 1:
+                alert('clicked Starred');
+                break;
+            case 2:
+                alert('clicked Send email');
+                break;
+            case 3:
+                alert('clicked Drafts');
+                break;
+
+        }
+    }
     const sideList = () => (
         <div className={`${styles['list']}`} role="presentation">
             <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                    <ListItem button onClick={() => handleClick(index)} key={text}>
+                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <Mail />}</ListItemIcon>
                         <ListItemText primary={text} />
                     </ListItem>
                 ))}
             </List>
             <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
         </div>
     );
 
     return (
         <div className={`${styles['container']}`}>
-            <Button className={styles['button']} onClick={() => setOpenMenu(true)}>Open Menu</Button>
-            <Drawer open={openMenu} onClose={() => setOpenMenu(false)}>
-                {sideList()}
-            </Drawer>
+            <div className={styles['root']}>
+                <AppBar position="static">
+                    <Toolbar>
+                        <ListItemIcon onClick={() => setOpenMenu(true)}>{<Menu color={'secondary'} />}</ListItemIcon>
+                        <Drawer open={openMenu} onClose={() => setOpenMenu(false)}>
+                            {sideList()}
+                        </Drawer>
+                    </Toolbar>
+                </AppBar>
+            </div>
         </div>
     );
 }
